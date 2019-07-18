@@ -1,15 +1,16 @@
 ﻿using System;
 using CompetitiveProgramming.DataStructure;
-using CompetitiveProgramming.HackerEarth;
 using CompetitiveProgramming.Algorithm;
 
 namespace CompetitiveProgramming
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args)  
         {
-            HackerEarth.HackerEarth.MonkAndPrisonerOfAzkaban();
+            //HackerEarth.HackerEarth.MonkAndPrisonerOfAzkaban();
+
+
 
             #region DotNet Interview Questions
 
@@ -35,6 +36,9 @@ namespace CompetitiveProgramming
             #endregion HackerRank
 
             #region HackerEarth
+            HackerEarth obHackerEarth = new HackerEarth();
+            obHackerEarth.Companies();
+
             #region CodeArena
             //WalterWhiteSellMeth();
             //MatrixRowMinorColumnMajor();
@@ -97,7 +101,7 @@ namespace CompetitiveProgramming
 
             #region Algorithm
             
-            AlgorithmFundamentals.BubbleSort(new int[] { 1, 5, 6, 2, 4, 3 });
+            // AlgorithmFundamentals.BubbleSort(new int[] { 1, 5, 6, 2, 4, 3 });
             //AlgorithmFundamentals.OptimizedBubbleSort(new int[] { 11, 17, 18, 26, 23 });
             //AlgorithmFundamentals.CallingQuickSort();
             #endregion Algorithm

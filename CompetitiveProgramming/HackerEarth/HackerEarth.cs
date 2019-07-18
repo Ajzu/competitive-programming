@@ -4,10 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CompetitiveProgramming.HackerEarth
+namespace CompetitiveProgramming
 {
     public class HackerEarth
     {
+        Honeywell obHoneywell;
+        public HackerEarth()
+        {
+            obHoneywell = new Honeywell();
+        }
+
+
         #region HackerEarth
 
         #region Challenges
@@ -1971,5 +1978,12 @@ namespace CompetitiveProgramming.HackerEarth
         #endregion CommonMethods
 
         #endregion HackerEarth
+
+        #region Companies
+        public void Companies()
+        {
+            obHoneywell.DivideArray();
+        }        
+        #endregion Companies
     }
 }
