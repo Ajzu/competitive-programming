@@ -12,7 +12,8 @@ namespace CompetitiveProgramming
         public HackerEarth()
         {
             obHoneywell = new Honeywell();
-            EMazeIn();
+            // EMazeIn(); Solved
+            BricksGame();
         }
 
         #region BasicProgramming
@@ -28,6 +29,55 @@ namespace CompetitiveProgramming
             Console.WriteLine( (rightCount - leftCount) + " " + (upCount - downCount) );
         }
 
+        public static void BricksGame()
+        {
+            int totalBricks = Convert.ToInt32(Console.ReadLine());
+
+            for (int i=1; i<=totalBricks; i++)
+            {
+                if (totalBricks >= i)
+                {
+                    totalBricks = totalBricks - i;
+                    int motu = (i * 2);
+                    if (totalBricks > 0)
+                    {
+                        if(totalBricks > motu)
+                        {
+                            totalBricks = totalBricks - motu;
+                            if (totalBricks <= 0)
+                            {
+                                totalBricks = 0;
+                                Console.WriteLine("Motu");
+                                break;
+                            }                                
+                        }
+                        else
+                        {
+                            totalBricks = 0;
+                            Console.WriteLine("Motu");
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        totalBricks = 0;
+                        Console.WriteLine("Patlu");
+                        break;
+                    }
+                }
+                else
+                {
+                    totalBricks = 0;
+                    Console.WriteLine("Patlu");
+                    break;
+                }             
+            }
+            if(totalBricks > 0)
+            {
+                Console.WriteLine("Patlu");
+            }
+            
+        }
 
         #endregion BasicProgramming
 
