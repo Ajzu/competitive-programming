@@ -38,6 +38,7 @@ namespace CompetitiveProgramming
             #region HackerEarth
             HackerEarth obHackerEarth = new HackerEarth();
             obHackerEarth.Companies();
+            //HackerEarth.PlayWithNumbers();
 
             #region CodeArena
             //WalterWhiteSellMeth();

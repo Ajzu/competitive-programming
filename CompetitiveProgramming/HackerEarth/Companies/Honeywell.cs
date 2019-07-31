@@ -50,7 +50,7 @@ namespace CompetitiveProgramming
                 {
                     arrayA[j] = dividedNumbers.Where(x => x.Key == arrayA[j]).FirstOrDefault().Value;
                 }
-                else
+                else 
                 {
                     for (int k = 0; k < Q.Length; k++)
                     {
@@ -71,6 +71,25 @@ namespace CompetitiveProgramming
                 }
             }
             Console.WriteLine(String.Join(" ", arrayA));
+        }
+
+        public void ItsAllAboutMagic()
+        {
+            int TestCases = Convert.ToInt32(Console.ReadLine());
+            string magicalString = "1";
+
+            for (int i=0; i<TestCases; i++)
+            {
+                int M = Convert.ToInt32(Console.ReadLine());
+
+                if(M > 2)
+                {
+                    for (int j=0; j<M; j++)
+                    {
+                        //
+                    }
+                }                
+            }           
         }
     }
 }

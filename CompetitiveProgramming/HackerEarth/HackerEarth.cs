@@ -12,10 +12,24 @@ namespace CompetitiveProgramming
         public HackerEarth()
         {
             obHoneywell = new Honeywell();
+            EMazeIn();
+        }
+
+        #region BasicProgramming
+
+        public static void EMazeIn()
+        {
+            string mazeDirections = Console.ReadLine();
+            char[] directions = mazeDirections.ToCharArray();
+            int leftCount = directions.Where(x => x == 'L').Count();
+            int rightCount = directions.Where(x => x == 'R').Count();
+            int upCount = directions.Where(x => x == 'U').Count();
+            int downCount = directions.Where(x => x == 'D').Count();
+            Console.WriteLine( (rightCount - leftCount) + " " + (upCount - downCount) );
         }
 
 
-        #region HackerEarth
+        #endregion BasicProgramming
 
         #region Challenges
 
@@ -1071,6 +1085,74 @@ namespace CompetitiveProgramming
 
         }
 
+        public static void PlayWithNumbers()
+        {
+            string[] NQ = Console.ReadLine().Split(' ');
+            int N = Convert.ToInt32(NQ[0]);
+            int Q = Convert.ToInt32(NQ[1]);
+            Dictionary<int, int> queries = new Dictionary<int, int>();
+            List<LeftRighSum> listLRS = new List<LeftRighSum>();
+            int[] arrayA = new int[N];
+            string[] elements = Console.ReadLine().Split(' ');
+
+            for (int i = 0; i < elements.Length; i++)
+            {
+                arrayA[i] = Convert.ToInt32(elements[i]);
+            }
+
+            for (int i = 0; i < Q; i++)
+            {
+                string[] LR = Console.ReadLine().Split(' ');
+                int L = Convert.ToInt32(LR[0]);
+                int R = Convert.ToInt32(LR[1]);
+                queries.Add(L, R);
+            }
+
+            foreach(KeyValuePair<int, int> item in queries)
+            {               
+                int L = item.Key;
+                L--;
+                int R = item.Value;
+                R--;
+
+                int sum = 0;
+                for (int j = L; j <= R; j++)
+                {
+                    sum += arrayA[j];
+                }
+                int count = R - L;
+                count++;
+                int mean = sum / count;
+                Console.WriteLine(mean);
+
+                LeftRighSum obLRS = new LeftRighSum();
+                obLRS.Left = item.Key;
+                obLRS.Right = item.Value;
+                obLRS.Sum = sum;
+
+                listLRS.Add(obLRS);
+            }
+        }
+
+        public static KeyValuePair<int, int> CheckLeftRight(List<LeftRighSum> listLRS, KeyValuePair<int, int> obLR)
+        {
+            KeyValuePair<int, int> leftSum = new KeyValuePair<int, int>();
+            List<LeftRighSum> resultList = new List<LeftRighSum>();
+            resultList = listLRS.Where(x => x.Left <= obLR.Key && x.Right <= obLR.Value).ToList();
+            
+            if(resultList.Count >0)
+            {
+                
+            }
+            else
+            {
+                //leftSum.Key = 0;
+                //leftSum.Value = 0;
+            }
+            return leftSum;
+        }
+
+
         #region Practice
 
         private static void PrimeNumberPractice()
@@ -1977,13 +2059,36 @@ namespace CompetitiveProgramming
 
         #endregion CommonMethods
 
-        #endregion HackerEarth
 
         #region Companies
         public void Companies()
         {
-            obHoneywell.DivideArray();
+            //obHoneywell.DivideArray();
         }        
         #endregion Companies
+    }
+}
+
+public class LeftRighSum
+{
+    private int left;
+    private int right;
+    private int sum;
+    public int Left
+    {
+        get { return left;  }
+        set { left = value; }            
+    }
+
+    public int Right
+    {
+        get { return right; }
+        set { right = value; }
+    }
+
+    public int Sum
+    {
+        get { return sum; }
+        set { sum = value; }
     }
 }
