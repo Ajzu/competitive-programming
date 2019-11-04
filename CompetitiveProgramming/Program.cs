@@ -1,6 +1,8 @@
 ﻿using System;
 using CompetitiveProgramming.DataStructure;
 using CompetitiveProgramming.Algorithm;
+using CompetitiveProgramming.Utility.PDF;
+using CompetitiveProgramming.Skillenza;
 
 namespace CompetitiveProgramming
 {
@@ -8,6 +10,17 @@ namespace CompetitiveProgramming
     {
         static void Main(string[] args)  
         {
+            #region Skillenza
+
+            // Skillenza.Skillenza.SpiltMilk();
+
+            #endregion Skillenza
+
+            #region Utility
+            ChromeToPDFLibraryUtility chromeToPDFLibraryUtility = new ChromeToPDFLibraryUtility();
+            chromeToPDFLibraryUtility.ConvertHtmlToPDF();
+            #endregion Utility
+
             //HackerEarth.HackerEarth.MonkAndPrisonerOfAzkaban();
 
 
@@ -37,7 +50,8 @@ namespace CompetitiveProgramming
 
             #region HackerEarth
             HackerEarth obHackerEarth = new HackerEarth();
-            obHackerEarth.Companies();
+            //obHackerEarth.Companies();
+            //obHackerEarth.Circuits();
             //HackerEarth.PlayWithNumbers();
 
             #region CodeArena

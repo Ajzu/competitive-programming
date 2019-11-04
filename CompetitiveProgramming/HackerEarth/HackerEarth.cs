@@ -9,11 +9,15 @@ namespace CompetitiveProgramming
     public class HackerEarth
     {
         Honeywell obHoneywell;
+        Circuits obCircuits;
         public HackerEarth()
         {
             obHoneywell = new Honeywell();
+            obCircuits = new Circuits();
             // EMazeIn(); Solved
-            BricksGame();
+            //BricksGame();
+            //SampleSortedDictionary();
+            //NotInRange();
         }
 
         #region BasicProgramming
@@ -77,6 +81,77 @@ namespace CompetitiveProgramming
                 Console.WriteLine("Patlu");
             }
             
+        }
+
+        public static void NotInRange()
+        {
+            int N = Convert.ToInt32(Console.ReadLine());
+            SortedDictionary<int, int> ranges = new SortedDictionary<int, int>();
+
+            for(int i=0; i<N; i++)
+            {
+                string[] range = Console.ReadLine().Split(' ');
+                int left = Convert.ToInt32(range[0]);
+                int right = Convert.ToInt32(range[1]);
+                KeyValuePair<int, int> oldRange = new KeyValuePair<int, int>();
+                oldRange = ranges.Where(x => x.Key == left).FirstOrDefault();
+                if(oldRange.Value > 0)
+                {
+                    if(left == oldRange.Key)
+                    {
+                        if(oldRange.Value < right)
+                        {
+                            ranges[left] = right;
+                        }
+                    }
+                }
+                else
+                {
+                    ranges.Add(left, right);
+                }
+
+                //KeyValuePair<int, int> overlappingRange = new KeyValuePair<int, int>();
+                //overlappingRange = ranges.Where(x => x.Value == left).FirstOrDefault();
+            }
+
+            for(int i=0; i< ranges.Count(); i++)
+            {
+                if (i < (ranges.Count()-1))
+                {
+                    //If left range is smaller than the next left range
+                    if (ranges.ElementAt(i).Key <= ranges.ElementAt(i + 1).Key)
+                    {
+                        //If next range is within the previous range
+                        if(ranges.ElementAt(i).Value >= ranges.ElementAt(i+1).Value)
+                        {
+                            ranges.Remove(ranges.ElementAt(i + 1).Key);
+                        }
+                    }
+                }
+                
+            }
+
+        }
+
+        public static void SampleSortedDictionary()
+        {
+            // Create a new SortedDictionary 
+            // of strings, with int keys. 
+            SortedDictionary<int, string> myDr = new SortedDictionary<int, string>();
+
+            // Adding key/value pairs in myDr 
+            myDr.Add(1, "Dog");
+            myDr.Add(7, "Turtle");
+            myDr.Add(2, "Cat");
+            myDr.Add(3, "Birds");
+            myDr.Add(4, "Rabbits");
+            myDr.Add(5, "Fish");
+            myDr.Add(6, "Hamster");
+            //myDr.Add(7, "Turtle");
+
+            // Display the total number of  
+            // key/value pairs present in myDr 
+            Console.WriteLine("Total number of pairs " + "present in myDr : {0}", myDr.Count);
         }
 
         #endregion BasicProgramming
@@ -2114,8 +2189,17 @@ namespace CompetitiveProgramming
         public void Companies()
         {
             //obHoneywell.DivideArray();
-        }        
+        }
         #endregion Companies
+
+        #region Circuits
+
+        public void Circuits()
+        {
+            obCircuits.DistributionOfToys();
+        }
+
+        #endregion Circuits
     }
 }
 
