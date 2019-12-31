@@ -10,6 +10,11 @@ namespace CompetitiveProgramming
     {
         static void Main(string[] args)  
         {
+            #region LeetCode
+            LeetCode leetCode = new LeetCode();
+            //leetCode.FindNumbers();
+            #endregion LeetCode
+
             #region Skillenza
 
             // Skillenza.Skillenza.SpiltMilk();
@@ -18,7 +23,7 @@ namespace CompetitiveProgramming
 
             #region Utility
             ChromeToPDFLibraryUtility chromeToPDFLibraryUtility = new ChromeToPDFLibraryUtility();
-            chromeToPDFLibraryUtility.ConvertHtmlToPDF();
+            //chromeToPDFLibraryUtility.ConvertHtmlToPDF();
             #endregion Utility
 
             //HackerEarth.HackerEarth.MonkAndPrisonerOfAzkaban();
@@ -41,7 +46,7 @@ namespace CompetitiveProgramming
             #endregion DotNet Interview Questions
 
             #region HackerRank
-
+            HackerRank hackerRank = new HackerRank();
             #region 30Days Challenge
             //ConditionalStatements();
             #endregion 30Days Challenge
@@ -49,7 +54,7 @@ namespace CompetitiveProgramming
             #endregion HackerRank
 
             #region HackerEarth
-            HackerEarth obHackerEarth = new HackerEarth();
+            // HackerEarth obHackerEarth = new HackerEarth();
             //obHackerEarth.Companies();
             //obHackerEarth.Circuits();
             //HackerEarth.PlayWithNumbers();
@@ -123,6 +128,8 @@ namespace CompetitiveProgramming
 
             Console.ReadLine();
         }
+
+
         
     }
 }

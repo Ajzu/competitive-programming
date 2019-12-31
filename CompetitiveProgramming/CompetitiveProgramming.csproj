@@ -228,6 +228,7 @@
     <Compile Include="HackerEarth\Companies\Honeywell.cs" />
     <Compile Include="HackerEarth\HackerEarth.cs" />
     <Compile Include="HackerRank\HackerRank.cs" />
+    <Compile Include="LeetCode\LeetCode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Skillenza\Skillenza.cs" />
