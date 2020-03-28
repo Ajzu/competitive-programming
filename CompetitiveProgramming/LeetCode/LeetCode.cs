@@ -26,9 +26,11 @@ namespace CompetitiveProgramming
             //int[] nums = new int[] { -2, 0, 10, -19, 4, 6, -8 };
             //bool CheckIfExist = CheckIfNandItsDoubleExists(nums);
 
+            //string address = "1.1.1.1";
+            //string defangedIPaddress = DefangIPaddr(address);
+
             //In Progress
-            string address = "1.1.1.1";
-            string  defangedIPaddress= DefangIPaddr(address);
+
             int[] nums = new int[] { 3,2,1};
             //int ThirdMaxIs = ThirdMax(nums);
 
