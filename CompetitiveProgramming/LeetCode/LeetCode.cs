@@ -21,9 +21,26 @@ namespace CompetitiveProgramming
             //string toLowerCase = "LOVELY";
             //string test = ToLowerCase(toLowerCase);
 
+            //int totalSteps = NumberOfSteps(14);
+
+            //int[] nums = new int[] { -2, 0, 10, -19, 4, 6, -8 };
+            //bool CheckIfExist = CheckIfNandItsDoubleExists(nums);
+
             //In Progress
-            int[] nums = new int[] { 2, 2, 1 };///{ 4, 1, 2, 1, 2 };
-            int uniqueSinglenumber = SingleNumber2(nums);
+            string address = "1.1.1.1";
+            string  defangedIPaddress= DefangIPaddr(address);
+            int[] nums = new int[] { 3,2,1};
+            //int ThirdMaxIs = ThirdMax(nums);
+
+            /*
+            int[] nums = new int[]{-1, -2, -3, -4, -5};/// { -3,4,3,90 };// { 3,2,4};//{ 2, 7, 11, 15 };
+            int target = -8;// 0;// 6;//9;
+            int[] temp = new int[2];
+            temp = TwoSum(nums, target);
+            */
+
+            //int[] nums = new int[] { 2, 2, 1 };///{ 4, 1, 2, 1, 2 };
+            //int uniqueSinglenumber = SingleNumber2(nums);
         }
 
         // Function to remove duplicate 
@@ -164,6 +181,205 @@ namespace CompetitiveProgramming
             }
 
             return res;
+        }
+
+        public int[] TwoSum(int[] nums, int target)
+        {
+            int[] indices = new int[2];
+
+            int index1 = 0;
+            int index2 = 0;
+            bool foundTwoSum = false;
+
+            for(int i=0; i<(nums.Length-1); i++)
+            {
+                if(nums[i] > nums[i+1])
+                {
+                    int temp = nums[i];
+                    nums[i] = nums[i + 1];
+                    nums[i + 1] = temp;
+                }
+            }
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                index1 = i;
+                int nextItem = target - nums[index1];
+                for (int j = i + 1; j < nums.Length; j++)
+                {
+                    if (nums[j] == nextItem)
+                    {
+                        index2 = j;
+                        foundTwoSum = true;
+                        break;
+                    }
+                }
+
+                if (foundTwoSum)
+                {
+                    break;
+                }
+            }
+
+            indices[0] = index1;
+            indices[1] = index2;
+
+            return indices;
+        }
+
+        /// <summary>
+        /// TwoSum1 is a successfully working solution and solves all the test cases.
+        /// It is number 1.TwoSum in LeetCode numbering.
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <param name="target"></param>
+        /// <returns></returns>
+        public int[] TwoSum1(int[] nums, int target)
+        {
+            int[] indices = new int[2];
+
+            int index1 = 0;
+            int index2 = 0;
+            bool foundTwoSum = false;
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                index1 = i;
+                int nextItem = target - nums[index1];
+                for (int j = i + 1; j < nums.Length; j++)
+                {
+                    if (nums[j] == nextItem)
+                    {
+                        index2 = j;
+                        foundTwoSum = true;
+                        break;
+                    }
+                }
+
+                if (foundTwoSum)
+                {
+                    break;
+                }
+            }
+
+            indices[0] = index1;
+            indices[1] = index2;
+
+            return indices;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
+        public int NumberOfSteps(int num)
+        {
+            int steps = 0;
+            if (num > 0)
+            {
+                while (num > 0)
+                {
+                    if (num % 2 == 0)
+                    {
+                        num = num / 2;
+                    }
+                    else
+                    {
+                        num = num - 1;
+                    }
+                    steps++;
+                }
+            }
+            return steps;
+        }
+
+        public bool CheckIfNandItsDoubleExists(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == 0)
+                {
+                    for(int j=0; j<arr.Length; j++)
+                    {
+                        if (arr[j] == 0 && i != j)
+                        {
+                            return true;
+                        }
+                    }
+                }
+                else
+                {
+                    int temporaryIndex = i + 1;
+                    while (temporaryIndex < arr.Length)
+                    {
+                        if (arr[i] == (2 * arr[temporaryIndex]))
+                        {
+                            return true;
+                        }
+                        else if (arr[temporaryIndex] == (2 * arr[i]))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            temporaryIndex++;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
+        public int ThirdMax(int[] nums)
+        {
+            for (int i = 0; i < (nums.Length - 1); i++)
+            {
+                if (nums[i] > nums[i + 1])
+                {
+                    int temp = nums[i + 1];
+                    nums[i + 1] = nums[i];
+                    nums[i] = temp;
+                }
+            }
+            if(nums.Length >2)
+            {
+                int thirdMaxItem = 0;
+                for (int i = (nums.Length - 1); i > 0; i--)
+                {
+                    if (nums[i] > nums[i-1])
+                    {
+                        if(thirdMaxItem <3)
+                        {
+                            thirdMaxItem++;
+                        }
+                        else
+                        {
+                            break;
+                        }                        
+                    }
+                }
+                if(thirdMaxItem == 3)
+                {
+                    return nums[nums.Length - 3];
+                }
+                else
+                {
+                    return nums[nums.Length - 1];
+                }
+                
+            }
+            else
+            {
+                return nums[1];
+            }        
+        }
+
+        public string DefangIPaddr(string address)
+        {
+
+            address = address.Replace(".", "[.]");
+            return address;
         }
 
     }

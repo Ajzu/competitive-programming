@@ -1,19 +1,22 @@
-﻿using System;
+﻿using CompetitiveProgramming.HackerEarth.DataStructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CompetitiveProgramming
+namespace CompetitiveProgramming.HackerEarth
 {
     public class HackerEarth
     {
         Honeywell obHoneywell;
         Circuits obCircuits;
+        ArrayDS obArrayDS;
         public HackerEarth()
         {
             obHoneywell = new Honeywell();
             obCircuits = new Circuits();
+            obArrayDS = new ArrayDS();
             // EMazeIn(); Solved
             //BricksGame();
             //SampleSortedDictionary();
@@ -2196,7 +2199,29 @@ namespace CompetitiveProgramming
 
         public void Circuits()
         {
-            obCircuits.DistributionOfToys();
+            //obCircuits.DistributionOfToys();
+
+            int totalFriendsN = 11;
+            List<string> identityDislikes = new List<string>();
+            identityDislikes.Add("7 3 11 4 5 6 1 2 8 9");
+            identityDislikes.Add("1 11 10 5 6 8 3 7 4 2");
+            identityDislikes.Add("9 3 2 7 5 8 10 4 1 11");
+            identityDislikes.Add("8 2 5 10 3 6 4 7 9 1");
+            identityDislikes.Add("3 10 2 11 7 9 1 5 6 4");
+            identityDislikes.Add("5 11 1 3 8 10 4 6 2 9");
+            identityDislikes.Add("11 1 8 7 3 2 10 6 5 9");
+            identityDislikes.Add("4 1 5 11 10 6 3 2 9 7");
+            identityDislikes.Add("2 1 9 11 8 6 7 10 3 4");
+            identityDislikes.Add("10 5 4 1 3 6 2 11 7 8");
+            obCircuits.DislikesAndParty(totalFriendsN, identityDislikes);
+
+            int totalFriendsN2 = 10;
+            List<string> identityDislikes2 = new List<string>();
+            identityDislikes2.Add("1 2 3 4 5 6");
+            identityDislikes2.Add("2 1 3 8 10");
+            identityDislikes2.Add("3 1 2 4 10");
+            obCircuits.DislikesAndParty(totalFriendsN2, identityDislikes2);
+
         }
 
         #endregion Circuits

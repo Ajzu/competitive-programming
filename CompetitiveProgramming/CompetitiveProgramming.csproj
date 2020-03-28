@@ -226,6 +226,7 @@
     <Compile Include="Dotnet\Fundamentals.cs" />
     <Compile Include="HackerEarth\Circuits\Circuits.cs" />
     <Compile Include="HackerEarth\Companies\Honeywell.cs" />
+    <Compile Include="HackerEarth\DataStructure\ArrayDS.cs" />
     <Compile Include="HackerEarth\HackerEarth.cs" />
     <Compile Include="HackerRank\HackerRank.cs" />
     <Compile Include="LeetCode\LeetCode.cs" />

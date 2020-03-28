@@ -3,6 +3,7 @@ using CompetitiveProgramming.DataStructure;
 using CompetitiveProgramming.Algorithm;
 using CompetitiveProgramming.Utility.PDF;
 using CompetitiveProgramming.Skillenza;
+using CompetitiveProgramming.HackerEarth;
 
 namespace CompetitiveProgramming
 {
@@ -11,7 +12,7 @@ namespace CompetitiveProgramming
         static void Main(string[] args)  
         {
             #region LeetCode
-            LeetCode leetCode = new LeetCode();
+            //LeetCode leetCode = new LeetCode();
             //leetCode.FindNumbers();
             #endregion LeetCode
 
@@ -54,7 +55,7 @@ namespace CompetitiveProgramming
             #endregion HackerRank
 
             #region HackerEarth
-            // HackerEarth obHackerEarth = new HackerEarth();
+            CompetitiveProgramming.HackerEarth.HackerEarth obHackerEarth = new CompetitiveProgramming.HackerEarth.HackerEarth();
             //obHackerEarth.Companies();
             //obHackerEarth.Circuits();
             //HackerEarth.PlayWithNumbers();
