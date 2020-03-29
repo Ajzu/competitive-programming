@@ -12,7 +12,7 @@ namespace CompetitiveProgramming
         static void Main(string[] args)  
         {
             #region LeetCode
-            //LeetCode leetCode = new LeetCode();
+            LeetCode leetCode = new LeetCode();
             //leetCode.FindNumbers();
             #endregion LeetCode
 

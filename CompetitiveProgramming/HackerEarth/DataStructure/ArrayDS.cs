@@ -10,7 +10,11 @@ namespace CompetitiveProgramming.HackerEarth.DataStructure
     {
         public ArrayDS()
         {
-            BinaryQueries2();
+
+            //InProgress
+            //BinaryQueries2();
+
+            //Solved
         }
 
         public void BinaryQueries()

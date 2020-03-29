@@ -10,6 +10,27 @@ namespace CompetitiveProgramming
     {
         public LeetCode()
         {
+            #region In Progress
+            //In Progress
+
+            //int[] nums = new int[] { 3, 2, 1 };
+            //int ThirdMaxIs = ThirdMax(nums);
+
+            IncreasingDecreasingString("aaaabbbbcccc");
+
+            /*
+            int[] nums = new int[]{-1, -2, -3, -4, -5};/// { -3,4,3,90 };// { 3,2,4};//{ 2, 7, 11, 15 };
+            int target = -8;// 0;// 6;//9;
+            int[] temp = new int[2];
+            temp = TwoSum(nums, target);
+            */
+
+            //int[] nums = new int[] { 2, 2, 1 };///{ 4, 1, 2, 1, 2 };
+            //int uniqueSinglenumber = SingleNumber2(nums);
+
+            #endregion In Progress
+
+            #region Solved
             //Solved
             // int[] findNums = new int[] { 12, 345, 2, 6, 7896 };
             // FindNumbers(findNums);
@@ -29,20 +50,17 @@ namespace CompetitiveProgramming
             //string address = "1.1.1.1";
             //string defangedIPaddress = DefangIPaddr(address);
 
-            //In Progress
-
-            int[] nums = new int[] { 3,2,1};
-            //int ThirdMaxIs = ThirdMax(nums);
-
             /*
-            int[] nums = new int[]{-1, -2, -3, -4, -5};/// { -3,4,3,90 };// { 3,2,4};//{ 2, 7, 11, 15 };
-            int target = -8;// 0;// 6;//9;
-            int[] temp = new int[2];
-            temp = TwoSum(nums, target);
+            int n = 234;
+            int resultSubtractProductAndSum = SubtractProductAndSum(n);
             */
 
-            //int[] nums = new int[] { 2, 2, 1 };///{ 4, 1, 2, 1, 2 };
-            //int uniqueSinglenumber = SingleNumber2(nums);
+            /*
+            int[] nums = new int[] { 8, 1, 2, 2, 3 };  //Input 3- { 7, 7, 7, 7 };//Input 2- { 6, 5, 4, 8 }; 
+            int[] resultSmallerNumbersThanCurrent = (int[])SmallerNumbersThanCurrent(nums);
+            */
+
+            #endregion Solved
         }
 
         // Function to remove duplicate 
@@ -384,5 +402,78 @@ namespace CompetitiveProgramming
             return address;
         }
 
+        /// <summary>
+        /// Solved.
+        /// Subtract the Product and Sum of Digits of an Integer - is the title in leetcode.
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns>result as the difference of product and sum.</returns>
+        public int SubtractProductAndSum(int n)
+        {
+            string inputNumber = n.ToString();
+            char[] digits = inputNumber.ToCharArray();
+            int sum = 0;
+            int product = 1;
+            foreach(char item in digits)
+            {
+                sum += Convert.ToInt32(item.ToString());
+                product = product * Convert.ToInt32(item.ToString());
+            }
+            int result = product - sum;
+
+            return result;
+        }
+
+        public int[] SmallerNumbersThanCurrent(int[] nums)
+        {
+            int[] result = new int[nums.Length];
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int greaterThan = 0;
+
+                for(int j=0; j<nums.Length; j++)
+                {
+                    if(i!=j)
+                    {
+                        if(nums[i] > nums[j])
+                        {
+                            greaterThan++;
+                        }
+                    }
+                }
+                result[i] = greaterThan;
+            }
+
+            //first sort array items in descending order.
+
+            //for (int i = 0; i < (nums.Length - 1); i++)
+            //{
+            //    if (nums[i] < nums[i + 1])
+            //    {
+            //        int temp = nums[i + 1]
+            //      nums[i + 1] = nums[i];
+            //        nums[i] = temp;
+            //    }
+            //}
+
+            //Now get the count of the items on the left side of the number except similar or equal numbers on the left like 2,2,2,1, here we will skip all the 2 and count from 1.
+
+            return result;
+        }
+
+        public string IncreasingDecreasingString(string s)
+        {
+            string result = "";
+
+            foreach(char item in s)
+            {
+                char customItem = s[0];
+                int sampleASCII = Convert.ToInt32(item);
+                //int test = (int)item;
+            }
+
+            return result;
+        }
     }
 }
