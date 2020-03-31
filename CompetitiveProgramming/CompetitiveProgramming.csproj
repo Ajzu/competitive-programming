@@ -222,6 +222,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithm\AlgorithmFundamentals.cs" />
+    <Compile Include="CodeForces\ProblemSet.cs" />
+    <Compile Include="CodeForces\ProblemSet\WrongSubtraction.cs" />
     <Compile Include="DataStructure\DataStructureFundamentals.cs" />
     <Compile Include="Dotnet\Fundamentals.cs" />
     <Compile Include="HackerEarth\Circuits\Circuits.cs" />
@@ -241,7 +243,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CodeChef\" />
-    <Folder Include="CodeForces\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="libeay32.dll">
