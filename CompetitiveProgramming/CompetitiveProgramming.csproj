@@ -222,7 +222,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithm\AlgorithmFundamentals.cs" />
-    <Compile Include="CodeForces\ProblemSet.cs" />
+    <Compile Include="CodeForces\ProblemSet\InSearchOfAnEasyProblem.cs" />
     <Compile Include="CodeForces\ProblemSet\WrongSubtraction.cs" />
     <Compile Include="DataStructure\DataStructureFundamentals.cs" />
     <Compile Include="Dotnet\Fundamentals.cs" />
@@ -245,6 +245,7 @@
     <Folder Include="CodeChef\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CodeForces\ProblemSet\ProblemSetReadMe.txt" />
     <Content Include="libeay32.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
