@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CompetitiveProgramming.CodeForces.ProblemSet
 {
     /// <summary>
-    /// In Progress
+    /// Solved
     /// In Search of an Easy Problem
     /// Submitssion code-
     /// time limit per test1 second
@@ -34,7 +34,7 @@ namespace CompetitiveProgramming.CodeForces.ProblemSet
         /// So now it's a search problem where we search for 1. If search is fast then quickly we know the result.
         /// Let's look at our options for faster search or search algorithms:
         /// 1. Naive String Matching Algorithm.
-        /// 2. Rabin Karp Algorithm.
+        /// 2. Rabin Karp Algorithm - we aren't using Rabin Karp because we have to use single character to search in the string and hashing will be expensive: this is personal opinion.
         /// Following is the implementation of Naive String Matching Algorithm.
         /// </summary>
         static void InSearchOfAnEasyProblemMethod()
@@ -56,7 +56,8 @@ namespace CompetitiveProgramming.CodeForces.ProblemSet
             if(easy == true)
             {
                 Console.WriteLine("EASY");
-            }            
+            }
+            Console.ReadLine();
         }
     }
 }

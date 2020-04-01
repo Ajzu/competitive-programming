@@ -13,7 +13,7 @@ namespace CompetitiveProgramming.CodeForces.ProblemSet
         /// Also, edit any other Main function to Main2 for running code from here.
         /// </summary>
         /// <param name="args"></param>
-        static void Main(string[] args)
+        static void Main2(string[] args)
         {
             BearAndBigBrotherMethod();
         }
