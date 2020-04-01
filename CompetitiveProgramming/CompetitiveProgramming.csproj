@@ -222,6 +222,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithm\AlgorithmFundamentals.cs" />
+    <Compile Include="CodeForces\ProblemSet\BearAndBigBrother.cs" />
     <Compile Include="CodeForces\ProblemSet\InSearchOfAnEasyProblem.cs" />
     <Compile Include="CodeForces\ProblemSet\WrongSubtraction.cs" />
     <Compile Include="DataStructure\DataStructureFundamentals.cs" />
