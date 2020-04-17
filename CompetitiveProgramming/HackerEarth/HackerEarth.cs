@@ -21,6 +21,9 @@ namespace CompetitiveProgramming.HackerEarth
             //BricksGame();
             //SampleSortedDictionary();
             //NotInRange();
+
+            //Inprogress
+            Zoos();
         }
 
         #region BasicProgramming
@@ -155,6 +158,36 @@ namespace CompetitiveProgramming.HackerEarth
             // Display the total number of  
             // key/value pairs present in myDr 
             Console.WriteLine("Total number of pairs " + "present in myDr : {0}", myDr.Count);
+        }
+
+        public static void Zoos()
+        {
+            string xy = Console.ReadLine();
+            int xCount = 0;
+            int yCount = 0;
+
+            foreach(char c in xy)
+            {
+                if(c =='z')
+                {
+                    xCount++;
+                }
+                else
+                {
+                    yCount++;
+                }
+            }
+
+            xCount = 2 * xCount;
+            
+            if(xCount == yCount)
+            {
+                Console.WriteLine("Yes");
+            }
+            else
+            {
+                Console.WriteLine("No");
+            }            
         }
 
         #endregion BasicProgramming
