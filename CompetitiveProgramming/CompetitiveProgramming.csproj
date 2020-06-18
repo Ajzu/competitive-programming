@@ -228,6 +228,8 @@
     <Compile Include="CodeForces\ProblemSet\InSearchOfAnEasyProblem.cs" />
     <Compile Include="CodeForces\ProblemSet\WrongSubtraction.cs" />
     <Compile Include="DataStructure\DataStructureFundamentals.cs" />
+    <Compile Include="DataStructure\Trees\BinaryTree.cs" />
+    <Compile Include="DataStructure\Trees\Node.cs" />
     <Compile Include="Dotnet\Fundamentals.cs" />
     <Compile Include="HackerEarth\Circuits\Circuits.cs" />
     <Compile Include="HackerEarth\Companies\Honeywell.cs" />
