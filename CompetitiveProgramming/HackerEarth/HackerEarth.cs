@@ -23,7 +23,7 @@ namespace CompetitiveProgramming.HackerEarth
             //NotInRange();
 
             //Inprogress
-            Zoos();
+            //Zoos();
         }
 
         #region BasicProgramming

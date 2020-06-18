@@ -122,10 +122,11 @@ namespace CompetitiveProgramming
             #endregion HackerEarth
 
             #region Algorithm
-            
+
             // AlgorithmFundamentals.BubbleSort(new int[] { 1, 5, 6, 2, 4, 3 });
             //AlgorithmFundamentals.OptimizedBubbleSort(new int[] { 11, 17, 18, 26, 23 });
             //AlgorithmFundamentals.CallingQuickSort();
+            AlgorithmFundamentals.BasicBubbleSort();
             #endregion Algorithm
 
             Console.ReadLine();
