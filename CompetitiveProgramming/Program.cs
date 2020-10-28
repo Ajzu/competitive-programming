@@ -114,7 +114,7 @@ namespace CompetitiveProgramming
             #region DataStructures
 
             DataStructureFundamentals dsTutorials = new DataStructureFundamentals();
-            dsTutorials.CreateBinaryTree();
+            //dsTutorials.CreateBinaryTree();
             //dsTutorials.BasicsOfLinkedList();
             //dsTutorials.BasicsOfQueues();
 
