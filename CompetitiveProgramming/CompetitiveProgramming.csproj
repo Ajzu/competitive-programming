@@ -232,6 +232,8 @@
     <Compile Include="DataStructure\Trees\Node.cs" />
     <Compile Include="Dotnet\Fundamentals.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\CostOfBaloons.cs" />
+    <Compile Include="HackerEarth\BasicProgramming\InputOutput\SplitHouses.cs" />
+    <Compile Include="HackerEarth\BasicProgramming\InputOutput\Zoos.cs" />
     <Compile Include="HackerEarth\Circuits\Circuits.cs" />
     <Compile Include="HackerEarth\Companies\Honeywell.cs" />
     <Compile Include="HackerEarth\DataStructure\ArrayDS.cs" />

@@ -3,7 +3,7 @@ using CompetitiveProgramming.DataStructure;
 using CompetitiveProgramming.Algorithm;
 using CompetitiveProgramming.Utility.PDF;
 using CompetitiveProgramming.Skillenza;
-using CompetitiveProgramming.HackerEarth;
+using CompetitiveProgramming.HackerEarth.BasicProgramming;
 
 namespace CompetitiveProgramming
 {
@@ -11,7 +11,7 @@ namespace CompetitiveProgramming
     {
         static void Main(string[] args)  
         {
-            
+            SplitHouses.HackerEarthImplementation();
             #region LeetCode
             //LeetCode leetCode = new LeetCode();
             LeetCodeThirtyDayChallenge leetCodeThirtyDayChallenge = new LeetCodeThirtyDayChallenge();
