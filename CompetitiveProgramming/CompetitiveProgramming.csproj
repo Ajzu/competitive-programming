@@ -234,6 +234,7 @@
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\CostOfBaloons.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\CountDivisors.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\Movement.cs" />
+    <Compile Include="HackerEarth\BasicProgramming\InputOutput\RoyAndProfilePicture.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\SplitHouses.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\Zoos.cs" />
     <Compile Include="HackerEarth\Circuits\Circuits.cs" />
