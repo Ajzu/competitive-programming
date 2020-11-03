@@ -13,23 +13,34 @@ namespace CompetitiveProgramming.HackerEarth.BasicProgramming
             int n = Convert.ToInt32(Console.ReadLine());
             string grids = Console.ReadLine();
             char[] houses = grids.ToCharArray();
-            bool possible = false;
+            bool possible = true;
 
-            for(int i=0; i<n; i++)
+            for (int i = 0; i < n; i++)
             {
                 if(houses[i] =='.')
                 {
                     houses[i] = 'B';
-                    possible = true;
+                }
+                else
+                {
+                    if (houses[i] == 'H' && (i+1<n))
+                    {
+                        if(houses[i] == houses[i + 1])
+                        {
+                            possible = false;
+                            break;
+                        }                        
+                    }
                 }
             }
 
-            string result = possible ? "YES" : "NO";            
+            string result = possible ? "YES" : "NO";
             Console.WriteLine(result);
-            if(possible)
+            if (possible)
             {
                 Console.WriteLine(String.Join("", houses));
-            }            
+            }
         }
+
     }
 }
