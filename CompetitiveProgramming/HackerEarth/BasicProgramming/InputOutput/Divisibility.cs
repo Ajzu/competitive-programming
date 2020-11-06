@@ -22,7 +22,7 @@ namespace CompetitiveProgramming.HackerEarth.BasicProgramming
             }
         }
 
-        public static string HackerEarthImplementation()
+        public static void HackerEarthImplementation()
         {
             int N = Convert.ToInt32(Console.ReadLine());
             string numbers = Console.ReadLine();
@@ -31,11 +31,11 @@ namespace CompetitiveProgramming.HackerEarth.BasicProgramming
 
             if (lastItem == "0")
             {
-                return "Yes";
+                Console.WriteLine("Yes");
             }
             else
             {
-                return "No";
+                Console.WriteLine("No");
             }
         }
     }
