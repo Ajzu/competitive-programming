@@ -11,6 +11,8 @@ namespace CompetitiveProgramming
     {
         static void Main(string[] args)  
         {
+            // LifeTheUniverseAndEverything.HackerEarthImplementation();
+
             #region LeetCode
             //LeetCode leetCode = new LeetCode();
             LeetCodeThirtyDayChallenge leetCodeThirtyDayChallenge = new LeetCodeThirtyDayChallenge();
