@@ -231,6 +231,7 @@
     <Compile Include="DataStructure\Trees\BinaryTree.cs" />
     <Compile Include="DataStructure\Trees\Node.cs" />
     <Compile Include="Dotnet\Fundamentals.cs" />
+    <Compile Include="HackerEarth\BasicProgramming\InputOutput\BackToSchool.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\CostOfBaloons.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\CountDivisors.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\Divisible.cs" />

@@ -20,7 +20,7 @@ namespace CompetitiveProgramming.HackerEarth.BasicProgramming
             }
             else
             {
-                return "Don't Take Medicine";
+                return "Don't take Medicine";
             }
         }
 
@@ -36,7 +36,7 @@ namespace CompetitiveProgramming.HackerEarth.BasicProgramming
             }
             else
             {
-                Console.WriteLine("Don't Take Medicine");
+                Console.WriteLine("Don't take Medicine");
             }
         }
     }
