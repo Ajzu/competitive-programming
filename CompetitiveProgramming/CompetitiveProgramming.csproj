@@ -241,6 +241,7 @@
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\Duration.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\FriendsRelationship.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\GokiAndHisBreakup.cs" />
+    <Compile Include="HackerEarth\BasicProgramming\InputOutput\Hello.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\IAmEasy.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\ITsMagic.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\LifeTheUniverseAndEverything.cs" />
