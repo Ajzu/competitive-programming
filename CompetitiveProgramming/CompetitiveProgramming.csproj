@@ -245,6 +245,7 @@
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\Hello.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\IAmEasy.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\ITsMagic.cs" />
+    <Compile Include="HackerEarth\BasicProgramming\InputOutput\Ladderophilia.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\LifeTheUniverseAndEverything.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\Movement.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\NumberOfSteps.cs" />

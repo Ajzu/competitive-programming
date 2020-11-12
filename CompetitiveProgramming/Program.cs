@@ -11,6 +11,7 @@ namespace CompetitiveProgramming
     {
         static void Main(string[] args)  
         {
+            // Ladderophilia.HackerEarthImplementation(); // Solved
             // LifeTheUniverseAndEverything.HackerEarthImplementation(); // Solved
             // FriendsRelationship.HackerEarthImplementation(); // Solved
 
