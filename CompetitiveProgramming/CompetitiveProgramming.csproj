@@ -234,6 +234,7 @@
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\BackToSchool.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\AliAndHelpingInnocentPeople.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\BookOfPotionMaking.cs" />
+    <Compile Include="HackerEarth\BasicProgramming\InputOutput\Cipher.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\CostOfBaloons.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\CountDivisors.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\Divisibility.cs" />
