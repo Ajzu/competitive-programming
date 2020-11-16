@@ -252,6 +252,7 @@
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\NumberOfSteps.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\RoyAndProfilePicture.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\SplitHouses.cs" />
+    <Compile Include="HackerEarth\BasicProgramming\InputOutput\TeddyAndTweety.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\TwoStrings.cs" />
     <Compile Include="HackerEarth\BasicProgramming\InputOutput\Zoos.cs" />
     <Compile Include="HackerEarth\Circuits\Circuits.cs" />
