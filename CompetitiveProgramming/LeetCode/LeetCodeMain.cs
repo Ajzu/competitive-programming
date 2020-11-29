@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CompetitiveProgramming
 {
-    public class LeetCode
+    public class LeetCodeMain
     {
-        public LeetCode()
+        public LeetCodeMain()
         {
             #region In Progress
             //In Progress
