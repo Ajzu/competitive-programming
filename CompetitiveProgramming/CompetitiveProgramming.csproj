@@ -264,6 +264,7 @@
     <Compile Include="LeetCode\LeetCodeMain.cs" />
     <Compile Include="LeetCode\LeetCodeThirtyDayChallenge.cs" />
     <Compile Include="LeetCode\Problems\Medium\SearchA2DMatrix.cs" />
+    <Compile Include="LeetCode\WeeklyContest\GoalParserInterpretation.cs" />
     <Compile Include="LeetCode\WeeklyContest\RichestCustomerWealth.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

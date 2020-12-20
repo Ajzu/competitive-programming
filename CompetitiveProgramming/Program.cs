@@ -4,6 +4,7 @@ using CompetitiveProgramming.Algorithm;
 using CompetitiveProgramming.Utility.PDF;
 using CompetitiveProgramming.Skillenza;
 using CompetitiveProgramming.HackerEarth.BasicProgramming;
+using CompetitiveProgramming.LeetCode.WeeklyContest;
 
 namespace CompetitiveProgramming
 {
@@ -11,6 +12,19 @@ namespace CompetitiveProgramming
     {
         static void Main(string[] args)  
         {
+            int[] a = new int[] { 1, 2, 3, 4 };
+            int[] b = new int[] { 3, 1, 3, 4,3 };
+            int[] c = new int[] { 2, 5, 4, 4, 1, 3, 4, 4, 1, 4, 4, 1, 2, 1, 2, 2, 3, 2, 4, 2 };
+
+            GoalParserInterpretation.MaxOperations(c, 3);
+
+            GoalParserInterpretation.MaxOperations(a, 5);
+            GoalParserInterpretation.MaxOperations(b, 6);
+            //GoalParserInterpretation.Interpet("G()(al)");
+            //GoalParserInterpretation.Interpet("G()()()()(al)");
+            //GoalParserInterpretation.Interpet("(al)G(al)()()G");
+
+
             // Ladderophilia.HackerEarthImplementation(); // Solved
             // LifeTheUniverseAndEverything.HackerEarthImplementation(); // Solved
             // FriendsRelationship.HackerEarthImplementation(); // Solved
