@@ -5,6 +5,13 @@ namespace CompetitiveProgrammingUnitTest.LeetCode
 {
     public class SearchA2DMatrixTest
     {
+        SearchA2DMatrix searchA2DMatrix;
+
+        SearchA2DMatrixTest()
+        {
+            searchA2DMatrix = new SearchA2DMatrix();
+        }
+
         [SetUp]
         public void Setup()
         {
@@ -21,7 +28,7 @@ namespace CompetitiveProgrammingUnitTest.LeetCode
             matrix[1] = new int[] { 10, 11, 16, 20 };
             matrix[2] = new int[] { 23, 30, 34, 50 };            
 
-            bool actualResult = SearchA2DMatrix.BasicImplementation(matrix, target);
+            bool actualResult = searchA2DMatrix.SearchMatrix(matrix, target);
             
             Assert.AreEqual(expectedResult, actualResult);
         }
