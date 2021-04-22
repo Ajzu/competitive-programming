@@ -3,7 +3,7 @@ using CompetitiveProgramming.LeetCode.WeeklyContest;
 
 namespace CompetitiveProgrammingUnitTest.LeetCode
 {
-    public class ReformatPhoneNumberTest
+    public class AverageWaitingTimeTest
     {
         [SetUp]
         public void Setup()

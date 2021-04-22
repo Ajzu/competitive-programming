@@ -261,6 +261,8 @@
     <Compile Include="HackerEarth\DataStructure\ArrayDS.cs" />
     <Compile Include="HackerEarth\HackerEarth.cs" />
     <Compile Include="HackerRank\HackerRank.cs" />
+    <Compile Include="LeetCode\BiWeeklyContest\AverageWaitingTime.cs" />
+    <Compile Include="LeetCode\BiWeeklyContest\NumberOfStudentdsUnableToEatLunch.cs" />
     <Compile Include="LeetCode\LeetCodeMain.cs" />
     <Compile Include="LeetCode\LeetCodeThirtyDayChallenge.cs" />
     <Compile Include="LeetCode\Problems\Medium\SearchA2DMatrix.cs" />

@@ -12,6 +12,9 @@ namespace CompetitiveProgramming
     {
         static void Main(string[] args)  
         {
+            SortedSquares();
+            DuplicateZeros();
+
             int[] a = new int[] { 1, 2, 3, 4 };
             int[] b = new int[] { 3, 1, 3, 4,3 };
             int[] c = new int[] { 2, 5, 4, 4, 1, 3, 4, 4, 1, 4, 4, 1, 2, 1, 2, 2, 3, 2, 4, 2 };
@@ -151,8 +154,182 @@ namespace CompetitiveProgramming
             Console.ReadLine();
         }
 
+        public static void FindMaxConsecutiveOnes()//int[] nums)
+        {
+            int[] nums = new int[] { 1, 1, 0, 1, 1, 1 };
+            int max = 0;
+            int currentCounter = 0;
 
-        
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == 0)
+                {
+                    if (currentCounter > max)
+                    {
+                        max = currentCounter;
+                    }
+                    currentCounter = 0;
+                }
+                else
+                {
+                    currentCounter++;
+                }
+            }
+
+            if (currentCounter > max)
+            {
+                max = currentCounter;
+            }
+
+            Console.WriteLine(max);
+
+        }
+
+        /// <summary>
+        /// Find Numbers With Even Number Of Digits
+        /// </summary>
+        /// <returns></returns>
+        public int FindNumbers()//int[] nums)
+        {
+            int[] nums = new[] { 12, 345, 2, 6, 7896 };
+
+            int evenNumberOfDigits = 0;
+
+            foreach(int item in nums)
+            {
+                string currentitem = item.ToString();
+
+                if(currentitem.Length/2==0)
+                {
+                    evenNumberOfDigits++;
+                }
+            }
+
+            return evenNumberOfDigits;
+        }
+
+        public static int[] SortedSquares()//int[] nums)
+        {
+            //int[] nums = new int[] { -4, -1, 0, 3, 10 };//working
+            //int[] nums = new int[] { -4, 0, 1, 3, 10 };//working
+            int[] nums = new int[] { 1,2, 3, 5, 10 };// working
+            //int[] nums = new int[] { -5, -4, -3, -2, -1 };//working
+            //int[] nums = new int[] { -5, -4, -3, -2, -1 , 5};
+
+            int[] squares = new int[nums.Length];
+
+            //check if the first number is zero or positive number
+            if(nums[0] >=0)
+            {
+                for(int i = 0; i < nums.Length; i++)
+                {
+                    squares[i] = nums[i] * nums[i];
+                }
+            }
+            //if array has negative numbers
+            else if(nums[nums.Length-1] <0)
+            {
+                for (int i = 0; i <nums.Length; i++)
+                {
+                    squares[i] = nums[nums.Length-(i+1)] * nums[nums.Length - (i + 1)];
+                }
+            }
+            else
+            {
+                int median = nums.Length / 2;
+                //int middleIndex = 0;
+                int leftIndex = median;
+                int rightIndex = median;
+
+                //find the middle index
+                for (int i = 0; i < nums.Length; i++)
+                {
+                    if(nums[leftIndex] <0 && nums[leftIndex+1] <0)
+                    {
+                        leftIndex++;
+                    }
+                    else if(nums[leftIndex] >=0)
+                    {
+                        leftIndex--;
+                    }
+                    else
+                    {
+                        rightIndex = leftIndex + 1;
+                    }
+                }
+                Console.WriteLine("left index " + leftIndex + " : " + nums[leftIndex]);
+                Console.WriteLine("right index " + rightIndex + " : " + nums[rightIndex]);
+
+                bool leftDone = false;
+                bool rightDone = false;
+
+                for(int i=0; i<nums.Length; i++)
+                {
+                    int left = -(nums[leftIndex]);
+
+                    if (((left < nums[rightIndex]) || (rightDone == true)) && (leftDone==false))
+                    {
+                        squares[i] = left * left;
+                        leftIndex--;
+
+                        if(leftIndex <0)
+                        {
+                            leftIndex = 0;
+                            leftDone = true;
+                        }
+                    }
+                    else
+                    {
+                        squares[i] = nums[rightIndex] * nums[rightIndex];
+                        rightIndex++;
+
+                        if(rightIndex >= nums.Length)
+                        {
+                            rightIndex--;
+                            rightDone = true;
+                        }
+                    }
+                }
+            }
+            return squares;
+        }
+
+        public static void DuplicateZeros()//int[] arr)
+        {
+            int[] arr = new int[] { 1, 0, 2, 3, 0, 4, 5, 0 };
+            int nextItem = -1;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if(nextItem >=0 || arr[i] ==0)
+                {
+                    if (arr[i] == 0)
+                    {
+                        nextItem = arr[i + 1];
+                        arr[i + 1] = 0;
+                        i++;
+                    }
+                    else
+                    {
+                        if (arr[i] < arr.Length)
+                        {
+                            int previousItem = nextItem;
+                            nextItem = arr[i];
+                            arr[i] = previousItem;
+                        }
+                        else
+                        {
+                            arr[i] = nextItem;
+                        }
+                    }
+                }
+                else
+                {
+                    //do nothing
+                    //no zeros found
+                }
+            }
+        }
     }
 }
 public class SeatingArragements
